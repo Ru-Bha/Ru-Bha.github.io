@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>February</title>
+        <link rel="stylesheet" href="css/Feb23.css">
+    </head>
+    <body>
+        <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css"/>
+<h1><span>You</span> <span>are</span> <span>truly</span> <span>beautiful</span> <span>You're</span> <span>compasionate</span> <span>and</span> <span>kind.</span><br> <span>I</span> <span>Love</span> <span>everything</span> <span>about</span> <span>you</span> <span>But</span> <span>Mostly</span><br> <span>I</span> <span>love</span> <span>that</span> <span>you</span> <span>are</span> <span>mine</span> <span>I</span> <span>L</span><span>o</span><span>v</span><span>e</span> <span>Y</span><span>o</span><span>u</span> <span>M</span><span>y</span> <span>S</span><span>u</span><span>n</span> <span>a</span><span>n</span><span>d</span> <span>Stars.</span></h1>
+<div class="light"></div>
+
+<script>
+    var light = document.querySelector('.light');
+
+var px = 0;
+var py = 0;
+
+var touches = [];
+
+window.addEventListener('mousemove', follow, false);
+window.addEventListener('touchmove', follow, false);
+
+function follow(event) {
+  
+  px = event.pageX;
+  py = event.pageY;
+  
+  if(px == null || py == null) {
+    touches = event.touches;
+    px = touches[0].pageX;
+    py = touches[0].pageY;
+  }
+  
+  for (var i = 0; i < 20; i++) {
+    
+    light.style.transform = 'translate(' + px + 'px, ' + py + 'px) rotate(25deg)';
+    
+  }
+  
+}
+</script>
+    </body>
+</html>

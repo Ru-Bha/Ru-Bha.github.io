@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(../pictures/bae.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* display the cursor-svg in the top left corner */
+svg {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    width: 30px;
+    height: auto;
+    display: block;
+}
+/* animate the cursor-svg to fade out after the path element has been animated enough times to be annoying */
+svg {
+    animation: fadeOut 0.5s 10s forwards;
+
+    #offset {
+        animation: removeOffset 2s 5 ease-in-out;
+    }
+}
+@keyframes removeOffset {
+    37.5% {
+        stroke-dashoffset: 0;
+    }
+    75% {
+        stroke-dashoffset: var(--offset);
+    }
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+/* replace the default list-style with a custom counter */
+ol {
+    list-style: none;
+    counter-reset: days-counter;
+    font-size: 2rem;
+    position: relative;
+}
+/* increment the custom counter */
+ol li {
+    counter-increment: days-counter;
+    /* center the content in the viewport */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    -webkit-text-fill-color: rgb(254, 254, 254);
+    text-shadow: 0 1px 5px hsla(59, 72%, 75%, 0.8);
+    /* position relative to absolute position the pseudo element behind the text */
+    z-index: 5;
+}
+/* display the custom counter with the :before pseudo element, in the very center of the list item */
+ol li:before {
+    content: counter(days-counter);
+    z-index: -5;
+    position: absolute;
+    opacity: 0.5;
+    font-size: 15vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform: translate(-50%, 0%);
+}
+/* added bonus, a more christmas-y selection */
+ol li::selection {
+    color: hsl(0, 0%, 100%);
+    background: hsl(130, 50%, 35%);
+}
+/* position the custom counter to the left/right for odd/even list items */
+ol li:nth-child(odd):before {
+    left: 30%;
+}
+ol li:nth-child(even):before {
+    left: 110%;
+}
+
+/* add position sticky and position each subsequent list item 7.5vh from the previous */
+ol li {
+    position: sticky;
+}
+/* ! have the list items occupy enough vertical space to cover (viewport - vertical offset)
+otherwise the elements would collapse to the top once the page reaches the last item
+*/
+@for $counter from 1 through 12 {
+    ol li:nth-child(#{$counter}) {
+        top: #{($counter - 1) * 7.5vh};
+        height: #{100vh - ($counter - 1) * 7.5vh};
+    }
+}
+
+
+.box div{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    background-attachment: fixed;
+    border: 6px solid rgba(181, 166, 98, 0.8);
+}
+
+.box div:nth-child(1){
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2){
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+  }
+
+  .box div:nth-child(3){
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+  }
+
+  .box div:nth-child(4){
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+  }
+
+  .box div:nth-child(5){
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+  }
+
+  .box div:nth-child(6){
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+  }
+
+  .box div:nth-child(7){
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+  }
+
+  .box div:nth-child(8){
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+  }
+
+  .box div:nth-child(9){
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+  }
+
+  .box div:nth-child(10){
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+  }
+
+  @keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+  }

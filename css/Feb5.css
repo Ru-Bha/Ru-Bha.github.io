@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:#eba8a8;
+    color:rgb(231, 171, 171);
+  }
+  
+  .typewrite > .wrap { 
+    color: rgb(201, 28, 28);
+    font-family: 'Swanky and Moo Moo', cursive;
+  }
+  
+  * {
+    color:rgb(223, 18, 18); text-decoration: none; 
+  }

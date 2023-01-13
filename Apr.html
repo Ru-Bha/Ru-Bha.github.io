@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            April
+        </title>
+        <link rel="stylesheet" href="css/Apr.css">
+    </head>
+    <body>
+          
+          <div class="card" data-tilt data-tilt-scale="0.95" data-tilt-startY="40">
+            <div class="welcome">
+              Welcome to
+            </div>
+            <div class="year">
+              <span>My</span>
+              <span>Birthday</span>
+              <span>Month</span>
+            </div>  
+          </div>
+
+          <img src="images/tulips.png" id="menuIcon">
+
+          <div class="menu-box" id="menuBox">
+              <ul>
+                  <li><a href="Apr1.html">Day 1-4</a></li>
+                  <li><a href="Apr2.html">Day 5-8</a></li>
+                  <li><a href="Apr3.html">Day 9-12</a></li>
+                  <li><a href="Apr4.html">Day 13-16</a></li>
+                  <li><a href="Apr5.html">Day 17-20</a></li>
+                  <li><a href="Apr6.html">Day 21-25</a></li>
+                  <li><a href="Apr7.html">Day 26</a></li>
+                  <li><a href="Apr8.html">Day 27-30</a></li>
+              </ul>
+          </div>
+      
+      
+      
+          <script>
+      
+              let menuBox = document.getElementById("menuBox");
+              let menuIcon = document.getElementById("menuIcon");
+      
+              menuIcon.onclick = function(){
+                  menuBox.classList.toggle("open-menu");
+      
+                  if( menuBox.classList.contains("open-menu")){
+                      menuIcon.src = "images/close.png";
+                  }
+                  else{
+                      menuIcon.src = "images/tulips.png"
+                  }
+              }
+          </script>
+    </body>
+</html>

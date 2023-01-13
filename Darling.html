@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>January</title>
+       
+        <link rel="stylesheet" href="css/Darling.css">
+
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+        
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+          </div>
+
+
+       <div class="container">
+        
+        <div class="icon">
+            <div class="imgBx active" style="--i:1;" data-id="content1">
+            <img src="images/twentyfi.jpg">
+            </div>
+            <div class="imgBx" style="--i:2;" data-id="content2">
+            <img src="images/twentysix.jpg">
+                </div>
+             <div class="imgBx" style="--i:3;" data-id="content3">
+                <img src="images/twentysev.jpg">
+                    </div>
+             <div class="imgBx" style="--i:4;" data-id="content4">
+                <img src="images/twentyeg.jpg">
+                        </div>
+            <div class="imgBx" style="--i:5;" data-id="content5">
+                <img src="images/twentyni.jpg">
+                            </div>
+            <div class="imgBx" style="--i:6;" data-id="content6">
+                <img src="images/thirty.jpg">
+                                </div>
+            <div class="imgBx" style="--i:7;" data-id="content7">
+                <img src="images/thirtyone.jpg">
+                            </div>
+            <div class="imgBx" style="--i:8;" data-id="content8">
+                <img src="images/thirtytwo.jpg">
+                </div>
+                
+
+        </div>
+
+        <div class="content">
+            <div class="contentBx active" id="content1">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/twentyfi.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"If i can't find the cure,<br>I'll fix you with my love."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content2">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/twentysix.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"all my life<br>You stood by me.<br>when no one else<br>was ever behind me."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content3">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/twentysev.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"i fell so hard<br>but you kissed so soft.<br>i felt my heart<br>couldn't beat enough."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content4">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/twentyeg.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"i don't care if<br>you're peasant or a king<br>if you're with me<br>then you're everything."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content5">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/twentyni.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"you opened my eyes<br>you opened the door.<br>to something i've<br>never known before."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content6">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/thirty.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"cross my heart, hope to die<br>to my lover, i'd never lie<br>he said "be true"<br>i swear i'll try,<br>in the end it's him and i."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content7">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/thirtyone.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"Like a once in<br>a lifetime<br>you've changed<br>my world."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content8">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/thirtytwo.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>that's the end of<br>your b'day month<br>I Love You<br>always and forever.</h5>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+       </div>
+
+
+
+       <script>
+        let imgBx = document.querySelectorAll('.imgBx');
+        let contentBx = document.querySelectorAll('.contentBx');
+
+        for(let i=0; i<imgBx.length; i++){imgBx[i].addEventListener('mouseover', function(){
+            for(let i=0; i<contentBx.length; i++){
+                contentBx[i].className = 'contentBx'
+            }
+            document.getElementById(this.dataset.id).
+            className = 'contentBx active';
+
+            for(let i=0; i<imgBx.length; i++){
+                imgBx[i].className = 'imgBx';
+            }
+            this.className = 'imgBx active';
+        })}
+       </script>
+
+<div class="center-con" onclick="document.location='until.html'">
+    <div class="round">
+        <div id="cta">
+            <span class="arrow primera next "></span>
+            <span class="arrow segunda next "></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.round').click(function(e) {
+e.preventDefault();
+e.stopPropagation();
+$('.arrow').toggleClass('bounceAlpha');
+});
+</script>
+       
+    </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>January</title>
+       
+        <link rel="stylesheet" href="css/Yash.css">
+
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+        
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+          </div>
+
+
+       <div class="container">
+        
+        <div class="icon">
+            <div class="imgBx active" style="--i:1;" data-id="content1">
+            <img src="images/nine.jpg">
+            </div>
+            <div class="imgBx" style="--i:2;" data-id="content2">
+            <img src="images/ten.jpg">
+                </div>
+             <div class="imgBx" style="--i:3;" data-id="content3">
+                <img src="images/el.jpg">
+                    </div>
+             <div class="imgBx" style="--i:4;" data-id="content4">
+                <img src="images/twel.jpg">
+                        </div>
+            <div class="imgBx" style="--i:5;" data-id="content5">
+                <img src="images/thirteen.jpg">
+                            </div>
+            <div class="imgBx" style="--i:6;" data-id="content6">
+                <img src="images/fourteen.jpg">
+                                </div>
+            <div class="imgBx" style="--i:7;" data-id="content7">
+                <img src="images/fifteen.jpg">
+                            </div>
+            <div class="imgBx" style="--i:8;" data-id="content8">
+                <img src="images/sixteen.jpg">
+                </div>
+                
+
+        </div>
+
+        <div class="content">
+            <div class="contentBx active" id="content1">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/nine.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"There's no love,<br>like your love.<br>and no other<br>Could give more love."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content2">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/ten.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"There's nowhere<br>unless you're there."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content3">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/el.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"i'll be your strength,<br>I'll give you hope,<br>keeping your faith<br>when it's gone."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content4">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/twel.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"i have died everyday<br>waiting for you <br>Darling, don't be afraid<br>i have loved you for<br> a thousand years<br>I'll love you for<br>a thousand more"</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content5">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/thirteen.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"there's no one like you<br>you speak to my heart.<br>It's such a shame<br>we're world's apart.:("</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content6">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/fourteen.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"if road ahead is not so easy<br>our love will lead<br>the way for us.<br>Like a guiding star."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content7">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/fifteen.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"you're like a<br>dream come true,<br>Just want to<br>be with you."</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content8">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="images/sixteen.jpg">
+                    </div>
+                    <div class="textBx">
+                        <h5>"I told you everyday<br>i told you everynight<br>in every way<br>I love you."</h5>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+       </div>
+
+
+
+       <script>
+        let imgBx = document.querySelectorAll('.imgBx');
+        let contentBx = document.querySelectorAll('.contentBx');
+
+        for(let i=0; i<imgBx.length; i++){imgBx[i].addEventListener('mouseover', function(){
+            for(let i=0; i<contentBx.length; i++){
+                contentBx[i].className = 'contentBx'
+            }
+            document.getElementById(this.dataset.id).
+            className = 'contentBx active';
+
+            for(let i=0; i<imgBx.length; i++){
+                imgBx[i].className = 'imgBx';
+            }
+            this.className = 'imgBx active';
+        })}
+       </script>
+
+
+
+
+<div class="center-con" onclick="document.location='Honey.html'">
+    <div class="round">
+        <div id="cta">
+            <span class="arrow primera next "></span>
+            <span class="arrow segunda next "></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.round').click(function(e) {
+e.preventDefault();
+e.stopPropagation();
+$('.arrow').toggleClass('bounceAlpha');
+});
+</script>
+
+
+       
+    </body>
+</html>
